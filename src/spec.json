@@ -1,0 +1,285 @@
+{
+  "title": "Gestione delle prenotazioni della palestra comunale",
+  "description": "Prototipo navigabile per consultare il calendario settimanale, richiedere fasce orarie e gestire le richieste delle associazioni sportive. Include un riepilogo mensile delle ore assegnate.",
+  "accent": "indigo",
+  "pages": [
+    {
+      "id": "calendario",
+      "title": "Calendario settimanale",
+      "description": "Consulta le fasce libere e occupate e invia una richiesta di prenotazione. Le disponibilità sono indicative fino all’approvazione dell’ufficio sport.",
+      "metrics": [
+        {
+          "label": "Fasce libere questa settimana",
+          "value": "12"
+        },
+        {
+          "label": "Fasce occupate",
+          "value": "8"
+        },
+        {
+          "label": "Richieste in attesa",
+          "value": "4"
+        }
+      ],
+      "columns": [
+        "Giorno",
+        "Orario",
+        "Stato",
+        "Associazione",
+        "Attività",
+        "Partecipanti"
+      ],
+      "rows": [
+        [
+          "Lunedì",
+          "16:00–17:30",
+          "Libera",
+          "—",
+          "—",
+          "—"
+        ],
+        [
+          "Lunedì",
+          "17:30–19:00",
+          "Occupata",
+          "Lumo Atletica",
+          "Preparazione atletica",
+          "18"
+        ],
+        [
+          "Martedì",
+          "16:00–17:30",
+          "Occupata",
+          "Vela Basket",
+          "Allenamento",
+          "14"
+        ],
+        [
+          "Martedì",
+          "17:30–19:00",
+          "Libera",
+          "—",
+          "—",
+          "—"
+        ],
+        [
+          "Mercoledì",
+          "16:00–17:30",
+          "Libera",
+          "—",
+          "—",
+          "—"
+        ],
+        [
+          "Mercoledì",
+          "17:30–19:00",
+          "Occupata",
+          "Nubi Ginnastica",
+          "Ginnastica ritmica",
+          "12"
+        ],
+        [
+          "Giovedì",
+          "16:00–17:30",
+          "Libera",
+          "—",
+          "—",
+          "—"
+        ],
+        [
+          "Giovedì",
+          "17:30–19:00",
+          "Occupata",
+          "Lumo Atletica",
+          "Allenamento",
+          "20"
+        ],
+        [
+          "Venerdì",
+          "16:00–17:30",
+          "Occupata",
+          "Vela Basket",
+          "Tecnica individuale",
+          "10"
+        ],
+        [
+          "Venerdì",
+          "17:30–19:00",
+          "Libera",
+          "—",
+          "—",
+          "—"
+        ]
+      ],
+      "form": [
+        "Giorno",
+        "Orario",
+        "Stato",
+        "Associazione",
+        "Attività",
+        "Partecipanti"
+      ]
+    },
+    {
+      "id": "richieste",
+      "title": "Richieste di prenotazione",
+      "description": "Esamina le richieste e aggiorna il loro stato. La tabella può essere filtrata per stato e associazione.",
+      "metrics": [
+        {
+          "label": "In attesa",
+          "value": "4"
+        },
+        {
+          "label": "Approvate nel mese",
+          "value": "11"
+        },
+        {
+          "label": "Rifiutate nel mese",
+          "value": "2"
+        }
+      ],
+      "columns": [
+        "Associazione",
+        "Giorno",
+        "Orario",
+        "Attività",
+        "Partecipanti",
+        "Stato"
+      ],
+      "rows": [
+        [
+          "Lumo Atletica",
+          "Lunedì",
+          "17:30–19:00",
+          "Preparazione atletica",
+          "18",
+          "Approvata"
+        ],
+        [
+          "Vela Basket",
+          "Martedì",
+          "16:00–17:30",
+          "Allenamento",
+          "14",
+          "Approvata"
+        ],
+        [
+          "Nubi Ginnastica",
+          "Mercoledì",
+          "17:30–19:00",
+          "Ginnastica ritmica",
+          "12",
+          "In attesa"
+        ],
+        [
+          "Lumo Atletica",
+          "Giovedì",
+          "17:30–19:00",
+          "Allenamento",
+          "20",
+          "Approvata"
+        ],
+        [
+          "Vela Basket",
+          "Venerdì",
+          "16:00–17:30",
+          "Tecnica individuale",
+          "10",
+          "In attesa"
+        ],
+        [
+          "Nubi Ginnastica",
+          "Sabato",
+          "10:00–11:30",
+          "Allenamento di gruppo",
+          "16",
+          "Rifiutata"
+        ]
+      ],
+      "form": [
+        "Associazione",
+        "Giorno",
+        "Orario",
+        "Attività",
+        "Partecipanti",
+        "Stato"
+      ]
+    },
+    {
+      "id": "nuova-richiesta",
+      "title": "Nuova richiesta",
+      "description": "Inserisci una richiesta di prenotazione della palestra. La disponibilità sarà verificata dall’ufficio sport.",
+      "metrics": [],
+      "columns": [
+        "Associazione",
+        "Giorno",
+        "Orario",
+        "Attività",
+        "Partecipanti"
+      ],
+      "rows": [],
+      "form": [
+        "Associazione",
+        "Giorno",
+        "Orario",
+        "Attività",
+        "Partecipanti"
+      ]
+    },
+    {
+      "id": "riepilogo-mensile",
+      "title": "Riepilogo mensile",
+      "description": "Confronta le ore assegnate alle associazioni nel mese. Il riepilogo combina tabella e grafico per evidenziare la distribuzione delle fasce approvate.",
+      "metrics": [
+        {
+          "label": "Ore assegnate",
+          "value": "42"
+        },
+        {
+          "label": "Associazioni attive",
+          "value": "3"
+        },
+        {
+          "label": "Media per associazione",
+          "value": "14 h"
+        }
+      ],
+      "columns": [
+        "Associazione",
+        "Ore assegnate",
+        "Fasce approvate",
+        "Partecipanti medi"
+      ],
+      "rows": [
+        [
+          "Lumo Atletica",
+          "16",
+          "10",
+          "18"
+        ],
+        [
+          "Vela Basket",
+          "14",
+          "9",
+          "12"
+        ],
+        [
+          "Nubi Ginnastica",
+          "12",
+          "8",
+          "14"
+        ]
+      ],
+      "form": [
+        "Associazione",
+        "Ore assegnate",
+        "Fasce approvate",
+        "Partecipanti medi"
+      ]
+    }
+  ],
+  "theme": {
+    "palette": "verde-oliva",
+    "fonts": "istituzionale"
+  }
+}
